@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+{% block content%}
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+<!--  <meta charset="UTF-8">-->
+<!--  <title>Heart Attack Risk prediction</title>-->
+<!--  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>-->
+<!--  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>-->
+<!--  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>-->
+<!--  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>-->
+<!--  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">-->
+<!--</head>-->
+<!--<body style="background: rgb(252, 250, 250);">-->
+  <div class="login">
+   <h1>Heart Attack Risk prediction</h1>
+    <form action="{{ url_for('predict')}}" method="post">
+      <label for="age" colo>Age:  </label>
+      <input type="text" name="age" placeholder="age" required="required">
+      <br>
+      <br>
+      <label for="Sex">Sex:  </label>
+      <select id="Sex" name="Sex" placeholder="Sex", required="required">
+        <option value="0">Male</option>
+        <option value="1">Female</option>
+      </select>
+        <br>
+        <br>
+      <label for="chest_pain">Chest Pain level:  </label>
+      <select id="chest_pain" name="chest_pain", placeholder="chest_pain", required="required">
+        <option value="0">Not Applicable</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </select>
+      <br>
+         <br>
+      <label for="blood_pressure" colo>Resting Blood Pressure:  </label>
+      <input type="text" name="blood_pressure" placeholder="blood_pressure" required="required">
+      <br>
+         <br>
+      <label for="chol" colo>Cholesterol Levels in mg/dl:  </label>
+      <input type="text" name="chol" placeholder="chol" required="required">
+      <br>
+           <br>
+      <label for="fasting_sugar">Fasting blood sugar > 120?:  </label>
+      <select id="fasting_sugar" name="fasting_sugar", placeholder="fasting_sugar", required="required">
+        <option value="0">No</option>
+        <option value="1">Yes</option>
+      </select>
+      <br>
+           <br>
+      <label for="resting_results">Resting electrocardiographic results:  </label>
+      <select id="resting_results" name="resting_results", placeholder="resting_results", required="required">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+      </select>
+      <br>
+               <br>
+      <label for="heart_rate" colo>Maximum heart rate achieved:  </label>
+      <input type="text" name="heart_rate" placeholder="heart_rate" required="required">
+      <br>
+               <br>
+      <label for="angina">Exercise induced angina:  </label>
+      <select id="angina" name="angina", placeholder="angina", required="required">
+        <option value="0">No</option>
+        <option value="1">Yes</option>
+      </select>
+      <br>
+                 <br>
+      <label for="peak" colo>Previous peak(float values, e.g. 2.0):  </label>
+      <input type="text" name="peak" placeholder="peak" required="required">
+      <br>
+              <br>
+      <label for="slope">Slope:  </label>
+      <select id="slope" name="slope", placeholder="slope", required="required">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+      </select>
+      <br>
+               <br>
+      <label for="vessels">Number of major vessels:  </label>
+      <select id="vessels" name="vessels", placeholder="vessels", required="required">
+        <option value="0">Not Applicable</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </select>
+      <br>
+               <br>
+      <label for="thal">Thal rate:  </label>
+      <select id="thal" name="thal", placeholder="thal", required="required">
+        <option value="0">Not Applicable</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </select>
+      <br>
+      <br>
+      <button type="submit" class="btn btn-primary btn-block btn-large">Predict Heart Attack Risk</button>
+    </form>
+    <br>
+    <br>
+    <h2>
+    {{ prediction_text }}
+    </h2>
+  </div>
+<!--</body>-->
+<!--</html>-->
+      {% endblock %}

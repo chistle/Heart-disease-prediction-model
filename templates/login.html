@@ -1,0 +1,36 @@
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+<!--    <title>Login Page</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--    <form action="/login" method="POST">-->
+<!--        <p>Enter Username:</p>-->
+<!--        <p><input type="text" name="username" /></p>-->
+<!--        <p>Enter Password:</p>-->
+<!--        <p><input type="password" name="password" /></p>-->
+
+<!--        <p><input type="submit" value="submit" /></p>-->
+<!--    </form>-->
+<!--</body>-->
+<!--</html>-->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<div class="container">
+<form action="/login" method="POST">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Username</label>
+    <input type="text" class="form-control" name="username" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text"></div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label" >Password</label>
+    <input type="password" class="form-control" name="password" id="exampleInputPassword1">
+  </div>
+<!--  <div class="mb-3 form-check">-->
+<!--    <input type="checkbox" class="form-check-input" id="exampleCheck1">-->
+<!--    <label class="form-check-label" for="exampleCheck1">Check me out</label>-->
+<!--  </div>-->
+  <button type="submit" class="btn btn-primary" value="submit">Submit</button>
+</form></div>
+
+
